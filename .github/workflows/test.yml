@@ -14,9 +14,5 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 18.x
-      - name: Test NodeJS
-        run: |
-          node -v
-      - name: Test DIR
-        run: |
-          pwd
+      - name: Run Test
+        run: npm run test
