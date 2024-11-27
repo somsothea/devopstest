@@ -8,6 +8,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Test VM
+      - name: Clone Repo
         # Terminal
+        run: git clone https://github.com/KimangKhenng/devops-cadt-2.git
+      - name: List folders
         run: ls
