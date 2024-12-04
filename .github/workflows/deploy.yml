@@ -19,6 +19,7 @@ jobs:
             . ~/.nvm/nvm.sh
             whoami
             pwd
+            ls
             cd devops-cadt-2
             git pull
-            pm2 reload devops-test
+            pm2 restart devops-test
