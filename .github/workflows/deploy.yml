@@ -21,4 +21,4 @@ jobs:
             pwd
             cd devops-cadt-2
             git pull
-            pm2 reload test-server
+            pm2 reload devops-test
