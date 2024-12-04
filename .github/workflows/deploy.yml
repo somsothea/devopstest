@@ -11,8 +11,13 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.2.0
         with:
-          host: localhost
-          username: root
-          password: admin
-          port: 2233
-          script: whoami
+          host: 37.60.251.94
+          username: kimang
+          key: ${{ secrets.SSH_KEY }}
+          port: 1133
+          script: |
+            whoami
+            pwd
+            cd devops-cadt-2
+            git pull
+            pm2 reload test-server
