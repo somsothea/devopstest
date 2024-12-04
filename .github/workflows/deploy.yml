@@ -1,4 +1,4 @@
-name: Test API
+name: Deploy to VM
 on:
   push:
     branches: main
@@ -16,6 +16,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: 1133
           script: |
+            . ~/.nvm/nvm.sh
             whoami
             pwd
             cd devops-cadt-2
